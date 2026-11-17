@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Owner dashboard · FlashSlot</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("fs-theme");if(t){document.documentElement.dataset.theme=t}else if(window.matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.dataset.theme="dark"}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="admin">
+<header id="site-header"></header>
+<main class="container admin-layout">
+  <nav class="side" id="side" aria-label="Dashboard sections">
+    <button data-tab="overview" aria-current="page">Overview</button>
+    <button data-tab="appointments">Appointments</button>
+    <button data-tab="services">Services</button>
+    <button data-tab="staff">Staff</button>
+    <button data-tab="flash">Flash slots</button>
+    <button data-tab="waitlist">Waitlist</button>
+    <button data-tab="business">My business</button>
+  </nav>
+  <section id="panel" aria-live="polite"><div class="skeleton"></div></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

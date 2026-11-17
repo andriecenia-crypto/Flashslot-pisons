@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Create your account · FlashSlot</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("fs-theme");if(t){document.documentElement.dataset.theme=t}else if(window.matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.dataset.theme="dark"}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="register">
+<header id="site-header"></header>
+<main class="auth-wrap">
+  <div class="card auth-card">
+    <div class="card-body" style="padding:0">
+      <h1>Create your account</h1>
+      <p class="muted">Free for customers. Business owners need an invite code.</p>
+      <div class="form-error hidden" id="form-error" role="alert"></div>
+      <div class="field"><label for="full-name">Full name</label><input id="full-name" type="text" autocomplete="name" required></div>
+      <div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" required></div>
+      <div class="field"><label for="password">Password (8+ characters)</label><input id="password" type="password" autocomplete="new-password" minlength="8" required></div>
+      <div class="field"><label class="checkbox"><input type="checkbox" id="is-owner"> I own a business and want to list it</label></div>
+      <div id="owner-fields" class="hidden">
+        <div class="field"><label for="invite-code">Owner invite code</label><input id="invite-code" type="text" autocomplete="off"></div>
+        <div class="field"><label for="business-name">Business name</label><input id="business-name" type="text"></div>
+        <div class="field"><label for="category">Category</label>
+          <select id="category"><option value="barbershop">Barbershop</option><option value="dental">Dental clinic</option><option value="grooming">Pet groomer</option><option value="other">Other</option></select></div>
+      </div>
+      <button class="btn btn-primary btn-block" id="register-btn" type="button">Create account</button>
+      <p class="muted small" style="margin-top:1rem">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+  </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

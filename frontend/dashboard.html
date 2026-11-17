@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My bookings · FlashSlot</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("fs-theme");if(t){document.documentElement.dataset.theme=t}else if(window.matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.dataset.theme="dark"}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="dashboard">
+<header id="site-header"></header>
+<main class="container">
+  <div class="page-head">
+    <h1 style="font-size:clamp(1.8rem,4vw,2.6rem)">My bookings</h1>
+    <p class="muted" id="greeting">Loading your account…</p>
+  </div>
+
+  <section class="section" style="padding-top:.5rem">
+    <div class="section-head"><h2>Alerts</h2><button class="btn btn-ghost btn-sm" id="mark-read">Mark all as read</button></div>
+    <div class="card" id="alerts"><div class="empty">Loading…</div></div>
+  </section>
+
+  <section class="section" style="padding-top:.5rem">
+    <div class="section-head"><h2>Upcoming appointments</h2><a class="btn btn-primary btn-sm" href="index.html#businesses">Book another</a></div>
+    <div class="card" id="upcoming"><div class="empty">Loading…</div></div>
+  </section>
+
+  <section class="section" style="padding-top:.5rem">
+    <div class="section-head"><h2>My waitlists</h2></div>
+    <div class="card" id="waitlist"><div class="empty">Loading…</div></div>
+  </section>
+
+  <section class="section" style="padding-top:.5rem">
+    <div class="section-head"><h2>History</h2></div>
+    <div class="card" id="history"><div class="empty">Loading…</div></div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><span>FlashSlot turns last-minute cancellations into booked chairs.</span><span>Demo project. Notifications are simulated.</span></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

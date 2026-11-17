@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>FlashSlot: last-minute appointments at a discount</title>
+<meta name="description" content="Book discounted last-minute slots at barbershops, dental clinics and pet groomers near you.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem("fs-theme");if(t){document.documentElement.dataset.theme=t}else if(window.matchMedia("(prefers-color-scheme: dark)").matches){document.documentElement.dataset.theme="dark"}}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="home">
+<header id="site-header"></header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Cancelled at noon. Booked by five past.</h1>
+        <p class="lead">FlashSlot lists freshly cancelled appointments at barbershops, dental clinics and pet groomers, discounted until the clock runs out. Grab a slot or join a waitlist and we will alert you.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#flash">See live flash slots</a>
+          <a class="btn btn-ghost" href="register.html?role=owner">I run a business</a>
+        </div>
+      </div>
+      <aside class="board" aria-label="Slots closing soonest">
+        <div class="board-title"><span>Closing soonest</span><span class="live-dot">Live</span></div>
+        <div id="board-rows"><div class="board-empty">Loading live slots…</div></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="flash">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>Flash slots</h2><p class="muted">Each slot is a real opening with a running clock. First to claim it gets the price.</p></div>
+      </div>
+      <div class="grid grid-3" id="flash-grid"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="businesses" style="padding-top:1rem">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>Book a regular appointment</h2><p class="muted">Pick a service, a person and a time that suits you.</p></div>
+        <div class="chips" role="group" aria-label="Filter by category">
+          <button class="chip" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="barbershop" aria-pressed="false">Barbershops</button>
+          <button class="chip" data-filter="dental" aria-pressed="false">Dental</button>
+          <button class="chip" data-filter="grooming" aria-pressed="false">Pet groomers</button>
+        </div>
+      </div>
+      <div class="grid grid-3" id="business-grid"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container footer-inner"><span>FlashSlot turns last-minute cancellations into booked chairs.</span><span>Demo project. Notifications are simulated.</span></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
